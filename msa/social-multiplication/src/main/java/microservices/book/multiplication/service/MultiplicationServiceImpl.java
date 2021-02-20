@@ -48,7 +48,7 @@ class MultiplicationServiceImpl implements MultiplicationService {
     Optional<User> user = userRepository.findByAlias(attempt.getUser().getAlias());
 
     // 조작된 답안을 방지
-    Assert.isTrue(!attempt.isCorrect(), "채점한 상태로 보낼 수 없습니다!!");
+    Assert.isTrue(!attempt.isCorrect(), "You can't send an attempt marked as correct!!");
 
     // 답안을 채점
     boolean isCorrect = attempt.getResultAttempt() ==

@@ -41,7 +41,7 @@ public class GameServiceImplTest {
     // given - 기본적으로 행운의 숫자를 포함하지 않는 답안
     MultiplicationResultAttempt attempt = new MultiplicationResultAttempt(
             "john_doe", 20, 70, 1400, true);
-    given(multiplicationClient.retrieveMultiplicationResultAttemptById(anyLong()))
+    given(multiplicationClient.retrieveMultiplicationResultAttemptbyId(anyLong()))
             .willReturn(attempt);
   }
 
@@ -112,7 +112,7 @@ public class GameServiceImplTest {
     // 행운의 숫자가 포함된 답안
     MultiplicationResultAttempt attempt = new MultiplicationResultAttempt(
             "john_doe", 42, 10, 420, true);
-    given(multiplicationClient.retrieveMultiplicationResultAttemptById(attemptId))
+    given(multiplicationClient.retrieveMultiplicationResultAttemptbyId(attemptId))
             .willReturn(attempt);
 
     // when
@@ -161,7 +161,7 @@ public class GameServiceImplTest {
     // when
     GameStats stats = gameService.retrieveStatsForUser(userId);
 
-    // assert - 점수 카드 하나와 첫 번째 정답 배지를 획득
+    //  assert - 점수 카드 하나와 첫 번째 정답 배지를 획득
     assertThat(stats.getScore()).isEqualTo(totalScore);
     assertThat(stats.getBadges()).containsOnly(Badge.SILVER_MULTIPLICATOR);
   }

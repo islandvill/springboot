@@ -24,7 +24,7 @@ class MultiplicationResultAttemptClientImpl implements MultiplicationResultAttem
   }
 
   @Override
-  public MultiplicationResultAttempt retrieveMultiplicationResultAttemptById(final Long multiplicationResultAttemptId) {
+  public MultiplicationResultAttempt retrieveMultiplicationResultAttemptbyId(final Long multiplicationResultAttemptId) {
     return restTemplate.getForObject(
             multiplicationHost + "/results/" + multiplicationResultAttemptId,
             MultiplicationResultAttempt.class);

@@ -29,7 +29,7 @@ public final class Multiplication {
   private final int factorA;
   private final int factorB;
 
-  // JSON/JPA 를 위한 빈 생성자
+  // JSON/JPA 를 위한 빈 생성
   Multiplication() {
     this(0, 0);
   }

@@ -8,6 +8,6 @@ import microservices.book.gamification.client.dto.MultiplicationResultAttempt;
  */
 public interface MultiplicationResultAttemptClient {
 
-  MultiplicationResultAttempt retrieveMultiplicationResultAttemptById(final Long multiplicationId);
+  MultiplicationResultAttempt retrieveMultiplicationResultAttemptbyId(final Long multiplicationId);
 
 }

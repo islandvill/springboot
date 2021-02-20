@@ -84,7 +84,7 @@ class GameServiceImpl implements GameService {
 
     // 행운의 숫자 배지
     MultiplicationResultAttempt attempt = attemptClient
-            .retrieveMultiplicationResultAttemptById(attemptId);
+            .retrieveMultiplicationResultAttemptbyId(attemptId);
     if (!containsBadge(badgeCardList, Badge.LUCKY_NUMBER) &&
             (LUCKY_NUMBER == attempt.getMultiplicationFactorA() ||
                     LUCKY_NUMBER == attempt.getMultiplicationFactorB())) {
