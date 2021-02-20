@@ -82,11 +82,7 @@ class MultiplicationServiceImpl implements MultiplicationService {
 
   @Override
   public MultiplicationResultAttempt getResultById(final Long resultId) {
-    return attemptRepository.findById(resultId).orElseThrow(
-      ()-> new IllegalArgumentException(
-        "요청한 resultId [" + resultId + "]는 존재하지 않습니다."
-      )
-    );
+    return attemptRepository.findById(resultId).orElseThrow();
   }
 
 
